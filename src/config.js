@@ -1,0 +1,15 @@
+require('dotenv').config({ silent: true })
+
+const config = {
+  BOT_TOKEN: process.env.BOT_TOKEN,
+  ELOCAST_API_URL: process.env.ELOCAST_API_URL,
+
+  ADDON_STREAM_CHANNEL_ID: process.env.ADDON_STREAM_CHANNEL_ID,
+  ADDON_STREAM_LOOP_TIME: process.env.ADDON_STREAM_LOOP_TIME,
+  ADDON_STREAM_ELOCAST_SEO: process.env.ADDON_STREAM_ELOCAST_SEO,
+  ADDON_STREAM_USER_ID: process.env.ADDON_STREAM_USER_ID,
+  ADDON_STREAM_NOTIFY_ON_NOT_FOUND: !!(+process.env.ADDON_STREAM_NOTIFY_ON_NOT_FOUND),
+  ADDON_STREAM_NOTIFY_ON_ENDED: !!(+process.env.ADDON_STREAM_NOTIFY_ON_ENDED),
+}
+
+module.exports = config

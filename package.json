@@ -1,0 +1,30 @@
+{
+  "name": "ec-discord",
+  "version": "0.0.1",
+  "description": "Notifies users of stream update",
+  "main": "app.js",
+  "author": "Patryk Cieszkowski",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/app.js",
+    "build": "babel src --out-dir dist --copy-files",
+    "start": "npm run build && forever dist/app.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "forever": "^3.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/runtime": "^7.10.5",
+    "nodemon": "^2.0.4"
+  }
+}
